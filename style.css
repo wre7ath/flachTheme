@@ -58,10 +58,10 @@
 
 
 @font-face {
-  font-family: "maneli";
-  src: url("static/fonts/Maneli.woff2") format("woff2");
+  font-family: "Dosis";
+  src: url("static/fonts/dosis.woff2") format("woff2");
   font-display: swap;
-  font-weight: 600;
+  font-weight: 1 999;
 }
 
 
@@ -145,6 +145,10 @@ html[dir="ltr"] body {
   text-align: left;
 }
 
+html[dir="ltr"] body {
+  font-family: "Dosis";
+}
+
 html[dir="rtl"] body {
   font-family: "iranmarker";
 }
@@ -179,6 +183,20 @@ html[dir='rtl'] :where(h1,
   font-family: 'maneli';
   letter-spacing: 0.025em;
   font-weight: 400;
+}
+
+
+html[dir='rtl'] :where(h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong) {
+  line-height: 2;
+  color: var(--c-white);
+  font-family: 'Dosis';
+  font-weight: 900;
 }
 
 

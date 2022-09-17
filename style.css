@@ -1,0 +1,344 @@
+/*
+ Theme Name: Falch Arts Custom Theme
+ Author: Amirhoseyn Shourideh
+ Author URI: wreath.ir
+ Version: 1.7.3
+*/
+
+/* Variables and Colors */
+
+:root {
+  --c-black: #111111;
+  --c-white: #fcfcfc;
+  --c-primary: #d32f2f;
+  --c-accent: #ffc107;
+  --c-theme: #212121;
+  --c-grey: #424242;
+  --c-grey-l: #bdbdbd;
+  --c-text: #e0e0e0;
+}
+
+/* 	[Structer]
+
+
+--General Style
+-- Default Style Reset
+--Typography
+--Wrappers
+--Buttons
+--Icons
+--Inputs
+--Animation Effects
+
+-- Special Classes
+
+*/
+/* 
+@font-face {
+  font-family: "dana VF";
+  src: url("fonts/dana2webGX.woff") format("woff-variations"),
+    url("fonts/dana2webGX.woff") format("woff");
+  font-display: swap;
+  font-weight: 1 999;
+} */
+
+@font-face {
+  font-family: "iranmarker";
+  src: url("static/fonts/IRANMarker.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "maneli";
+  src: url("static/fonts/Maneli.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "maneli";
+  src: url("static/fonts/Maneli.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: inherit;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: var(--c-black);
+  color: var(--c-grey-l);
+  scrollbar-gutter: auto;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+#wpadminbar *:not(.ab-icon) {
+  font-family: "barlow" !important;
+}
+
+#wpadminbar {
+  z-index: 1000 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a,
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+i {
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Typography */
+
+body {
+  font-size: 90%;
+  line-height: 1.35;
+
+}
+
+html[dir="ltr"] body {
+  font-family: "";
+  text-align: left;
+}
+
+html[dir="rtl"] body {
+  font-family: "iranmarker";
+}
+
+@media (min-width: 468px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 105%;
+  }
+}
+
+html[dir='rtl'] :where(h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong) {
+  line-height: 1.6;
+  color: var(--c-white);
+  font-family: 'maneli';
+  letter-spacing: 0.025em;
+  font-weight: 400;
+}
+
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+
+}
+
+h3 {
+  font-size: 1.17em;
+
+}
+
+h4 {
+  font-size: 1.12em;
+
+}
+
+h5 {
+  font-size: .83em;
+}
+
+h6 {
+  font-size: 0.75em;
+
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 2;
+}
+
+strong {}
+
+/* Frequently Used classes */
+
+.no-scroll {
+  overflow-y: hidden !important;
+}
+
+@media (max-width: 576px) {
+  html.no-scroll {
+    padding-right: 0 !important;
+  }
+}
+
+html.no-scroll {
+  padding-right: 17px !important;
+}
+
+[class*=flex] {
+  display: flex;
+}
+
+.flex-row {
+  flex-flow: row wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.pos-abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.fancy-box-shadow {
+  box-shadow: 0 1px 5px -2.5px var(--c-grey);
+}
+
+.faint-box-shadow {
+  box-shadow: 0 8px 30px -22px var(--c-grey);
+}
+
+.svg-icon {
+  display: inline-flex;
+  padding: 0.25em;
+}
+
+.svg-icon svg {
+  stroke: var(--c-white);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+#main-header {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--c-accent);
+  background-color: var(--c-grey);
+  height: 3em;
+}
+
+#main-nav-wrapper ul {
+  display: flex;
+}
+
+#main-nav-wrapper ul li {
+  margin: 0.33em 0.5em;
+
+}
+
+#main-nav-wrapper ul li a {
+  padding: 0.33em 0.75em;
+
+  border-radius: 2em;
+  color: var(--c-white);
+  display: flex;
+  align-content: center;
+  transition: all 0.4s ease;
+}
+
+html[dir="rtl"] #main-nav-wrapper ul li a {
+  padding: 0.2em 0.5em 0.5em;
+}
+
+#main-nav-wrapper ul li a:hover {
+  background-color: var(--c-primary);
+}
+
+#main-header .language-switch a {
+  color: var(--c-grey);
+  background-color: var(--c-primary);
+  padding: 0.25em;
+  font-size: 0.85em;
+  margin: 0 0.75em;
+  border-radius: 0.25em;
+  border: 1px solid var(--c-primary);
+  width: 1.75em;
+  height: 1.75em;
+}
+
+#main-header .language-switch a svg {
+  stroke: var(--c-primary);
+}
+
+#noise {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  user-select: none;
+  backface-visibility: visible;
+  pointer-events: none;
+
+}

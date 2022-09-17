@@ -1,0 +1,54 @@
+#main-footer {
+    text-align: center;
+
+}
+
+#main-footer .logo {
+    width: clamp(200px, 50vw, 300px);
+    margin: 1em 0;
+}
+
+
+#main-footer .cta {}
+
+#main-footer .icon-wrappers {}
+
+#main-footer .footer-icons {
+    display: inline-flex;
+}
+
+#main-footer .footer-icons a {
+    background-color: var(--c-theme);
+    padding: 0.25em 1em 0.25em 0.25em;
+    border-radius: 0.33em;
+    margin: 1em;
+    color: var(--c-white);
+
+    transition: all 0.45s ease-in-out;
+}
+
+html[dir="rtl"] #main-footer .footer-icons a{
+    padding: 0.25em 0.25em 0.25em 1em;
+}
+
+#main-footer .footer-icons a:hover {
+    background-color: var(--c-black);
+    color: var(--c-accent);
+    transform: translateY(-2px);
+}
+
+
+#main-footer .icon-wrappers .footer-icons a i {
+    margin: 0 .35em;
+
+}
+
+
+#main-footer .icon-wrappers .footer-icons a i svg {
+    transition: all 0.3s ease-in-out;
+}
+
+
+#main-footer .icon-wrappers .footer-icons a:hover i svg {
+    stroke: var(--c-accent)
+}

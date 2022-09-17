@@ -1,0 +1,56 @@
+main.about-content-wrapper {
+    padding: 2em 1em;
+    position: relative;
+    width: clamp(400px, 70%, 800px);
+    margin: auto;
+}
+
+.about-background {
+    position: sticky;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 60vmin;
+    height: 60vmin;
+    z-index: 1;
+    border-radius: 50%;
+    opacity: 0.4;
+    -webkit-filter: blur(120px);
+    filter: blur(120px);
+    background: var(--c-accent);
+
+    animation: borderRaduis 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 576px) {
+    .about-background {
+        opacity: 1;
+    }
+}
+
+html[dir="rtl"] .about-background {
+    transform: translate(50%, -50%);
+}
+
+@keyframes borderRaduis {
+    to {
+        border-radius: 20% 10% 40% 10%;
+    }
+}
+
+.about-header {
+    margin-top: -45vmin;
+}
+
+.about-content {
+    position: relative;
+    z-index: 20;
+    min-height: 100vh;
+    color: var(--c-grey-l);
+    padding: 2em 1em;
+}
+
+.about-content p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+    line-height: 2.25;
+}

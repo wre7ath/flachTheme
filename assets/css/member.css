@@ -1,0 +1,234 @@
+.container {
+    padding: 5vh 5vw;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.member-hero{
+    min-height: unset;
+}
+
+.member-hero-about {
+    flex: 2;
+    min-height: 50vh;
+}
+
+
+.member-hero-about p {
+    margin-top: 2em;
+    padding: 0.65em;
+}
+
+
+.member-hero-about a {
+    margin: auto 0 2em;
+    padding: .85em 2.5em;
+    border-radius: 1em;
+    color: var(--c-white);
+    background-color: var(--c-theme);
+    width: clamp(200px, 50vw, 300px);
+    text-align: center;
+    transition: all 0.45s ease-in-out;
+}
+
+.member-hero-about a:hover {
+    background-color: var(--c-black);
+    color: var(--c-accent);
+    transform: translateY(-2px);
+}
+
+.member-hero-image {
+    flex: 3;
+}
+
+@media screen and (max-width : 900px) {
+    .member-hero-image {
+        order: -1;
+    }
+
+    .member-hero-about {
+        margin-top: 2.5em;
+    }
+
+    .member-hero-about h1 {
+        text-align: center;
+    }
+
+    .member-hero-about a {
+        margin: 2em auto;
+    }
+
+    section {
+        min-height: 60vh;
+    }
+
+    .container {
+        padding: 2.5vh 2.5vw;
+    }
+
+    .member-hero-image, .member-hero-about{
+        flex: 1 0 100%;
+        min-height: unset;
+    }
+}
+
+
+.member-hero-image .image-wrapper {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    max-height: 50vh;
+    margin: auto;
+}
+
+
+.member-hero-image .image-wrapper img {
+    border: 1em solid var(--c-primary);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:600px){
+    .member-hero-image .image-wrapper{
+        height: 25vh;
+    }
+
+    .member-hero-image .image-wrapper img {
+        border: 0.5em solid var(--c-primary);
+    }
+}
+
+.member-films h2 {
+    text-align: center;
+}
+
+.member-films-wrapper {
+    justify-content: center;
+}
+
+.member-film-card {
+    flex: 1 1 400px;
+    max-width: 550px;
+    margin: 1.5em 1em;
+}
+
+.member-film-card-header {
+    border-radius: 0.33em 3em 0.33em 3em;
+    overflow: hidden;
+    height: clamp(200px, 50vh, 450px);
+    margin: auto;
+    position: relative;
+    aspect-ratio: 2/3;
+}
+
+.member-film-card-header img {
+    object-fit: cover;
+}
+
+.member-film-card-header :where(svg, a) {
+    transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.member-film-card-header a {
+    position: absolute;
+    bottom: 4.5em;
+    left: 1em;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: var(--c-accent);
+    text-align: center;
+}
+
+.member-film-card-header .falch-link {
+    transform: translateX(125%);
+}
+
+.member-film-card-header a:hover {
+    background-color: #ffffff12;
+    backdrop-filter: blur(2px);
+}
+
+.member-film-card-header a:hover svg {
+    stroke: var(--c-accent) !important;
+}
+
+.member-film-card-body {
+    padding: 0.35em 0.75em;
+    margin: auto;
+    transform: translateY(-3.5em);
+    background-color: #ffffff12;
+    backdrop-filter: blur(1em);
+    border-radius: 0.75em;
+    height: calc(100% - clamp(200px, 50vh, 450px));
+}
+
+.member-film-card-body .role {
+    text-align: center;
+    display: block;
+    color: var(--c-primary);
+    font-size: 0.85em;
+    margin: 0.5em;
+}
+
+.member-film-card-body h3 {
+    text-align: center;
+    font-size: 1.65em;
+    margin-top: 0.5em;
+}
+
+.member-film-card-body .description {
+    margin-top: 1em;
+    padding: 0.5em 0.75em;
+}
+
+#contact{
+    min-height: 25vh;
+}
+
+#contact a{
+    align-items: center;
+    /* justify-content: space-evenly; */
+    margin: 1em 2em;
+    padding: 0.75em 2em;
+    flex: 0 0 220px;
+    border-radius: 1em;
+    background-color: var(--c-black);
+    color: var(--c-accent);
+    transition: all 0.45s ease-in-out;
+    
+    
+}
+
+#contact a i svg {
+    stroke: var(--c-accent)
+}
+
+#contact a:hover {
+    background-color: var(--c-theme);
+    color: var(--c-white);
+    transform: translateY(4px);
+}
+
+
+#contact a i {
+    margin: 0 .35em;
+}
+
+
+#contact a i svg {
+    transition: all 0.3s ease-in-out;
+    width: 2em;
+    height: 2em;
+}
+
+#contact a:hover i svg {
+    stroke: var(--c-white)
+}
+
+
+#contact a span{
+    margin: auto;
+}

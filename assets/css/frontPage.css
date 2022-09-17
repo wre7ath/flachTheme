@@ -1,0 +1,93 @@
+body {
+    background-color: var(--c-black);
+}
+
+main.front-page-content {
+    min-height: 100vh;
+
+}
+
+.coming-soon {
+    margin-bottom: 2em;
+}
+
+.coming-soon-logo {}
+
+
+.coming-soon-title {
+    text-align: center;
+    font-size: 3em;
+}
+
+html[dir="ltr"] .coming-soon-title .letter {
+    display: inline-block;
+}
+
+.coming-soon-logo {
+    margin: auto auto 0.75em;
+    width: clamp(200px, 60vw, 400px);
+}
+
+.coming-soon-logo svg {
+    fill: var(--c-primary);
+
+}
+
+/* .coming-soon-logo svg .logo-animation{
+    fill: var(--c-theme);
+} */
+
+
+.about-falch,
+.falch-films {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    margin-top: 2em;
+}
+
+.about-falch a,
+.falch-films a {
+    width: clamp(200px,60vw,320px);
+    text-align: center;
+    padding: 1em 2em;
+    position: relative;
+    z-index: 20;
+    color: var(--c-white);
+    font-size: 1.5em;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+}
+
+
+.falch-films .background,
+.about-falch .background {
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.about-falch .background {
+    transform: translate(-100%, -20%);
+    background-image: linear-gradient(180deg, var(--c-primary) 0%, rgba(33, 33, 33, 0.25) 100%);
+}
+
+
+.falch-films .background {
+    background-image: linear-gradient(180deg, var(--c-accent) 0%, rgba(33, 33, 33, 0.25) 100%);
+    transform: translate(100%, 20%);
+    transition-delay: 0.33s;
+}
+
+
+.logo-done .about-falch .background {
+    transform: translate(-50%, 0);
+}
+
+.logo-done .falch-films .background {
+    transform: translate(50%, 0);
+}
+
+.falch-films {
+    transition-delay: 0.5s;
+}
